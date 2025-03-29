@@ -33,14 +33,19 @@ function Intro() {
 
 function SkillList() {
   return (
-    <div>
-      <Skill />
+    <div className="skill-list">
+      <Skill color="blue" />
+      <Skill color="orangered" />
     </div>
   );
 }
 
-function Skill() {
-  return <div className="skill">React</div>;
+function Skill(props) {
+  return (
+    <div className="skill" style={{ backgroundColor: props.color }}>
+      <span>React</span>
+    </div>
+  );
 }
 
 export default App;
